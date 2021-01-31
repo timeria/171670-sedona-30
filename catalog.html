@@ -8,7 +8,7 @@
     <header>
       <nav>
         <a href="index.html">
-          <img src="" alt="Главная">
+          <img src="" alt="Логотип Седоны">
         </a>
         <ul>
           <li>
@@ -28,12 +28,13 @@
     </header>
     <main>
     <section class="filter">
+      <form action="">
         <fieldset>
           <legend>Инфраструктура:</legend>
           <ul>
             <li>
               <label for="check-1">
-                <input type="checkbox" checked="" name="check-1" id="check-1">
+                <input type="checkbox" checked name="check-1" id="check-1">
                 <span>Бассейн</span>
               </label>
             </li>
@@ -56,19 +57,19 @@
           <ul>
             <li>
               <label for="check-4">
-                <input type="checkbox" checked="" name="check-4" id="check-4">
+                <input type="checkbox" checked name="check-4" id="check-4">
                 <span>Гостиница</span>
               </label>
             </li>
             <li>
               <label for="check-5">
-                <input type="checkbox" checked="" name="check-5" id="check-5">
+                <input type="checkbox" checked name="check-5" id="check-5">
                 <span>Мотель</span>
               </label>
             </li>
              <li>
               <label for="check-6">
-                <input type="checkbox" checked="" name="check-6" id="check-6">
+                <input type="checkbox" checked name="check-6" id="check-6">
                 <span>Апартаменты</span>
               </label>
             </li>
@@ -79,25 +80,27 @@
           <input type="range">
           <button type="submit">Показать</button>
         </fieldset>
+      </form>
       </section>
       <section class="content">
-        <div class="sort__top">
+        <div class="sort-top">
           <h2>Найдено: 3</h2>
           <ul>
             <li>Сортировка:</li>
             <li class="active">По цене</li>
-            <li>По типу</li>
-            <li>По рейтингу</li>
+            <li><a href="#!">По типу</a></li>
+            <li><a href="#!">По рейтингу</a></li>
           </ul>
           <ul>
-            <li></li>
-            <li></li>
+            <li class="active">По убыванию</li>
+            <li><a href="#!">По возростанию</a></li>
           </ul>
         </div>
-        <ul class="sort__rezult">
-          <li>
+        <div class="sort-rezult">
+          <article>
             <div>
               <img src="" alt="Amara Resort & Spa">
+              <h3>Amara Resort & Spa</h3>
               <p>Гостиница <span>от 4000 Р.</span></p>
               <div>
                 <a href="">Подробнее</a>
@@ -105,18 +108,13 @@
               </div>
             </div>
             <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <div>Рейтинг: 85</div>
+              <p>Рейтинг: 8,5</p>
             </div>
-          </li>
-           <li>
+          </article>
+           <article>
             <div>
               <img src="" alt="Desert Quail Inn">
+              <h3>Desert Quail Inn</h3>
               <p>Мотель <span>от 3000 Р.</span></p>
               <div>
                 <a href="">Подробнее</a>
@@ -124,34 +122,10 @@
               </div>
             </div>
             <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <div>Рейтинг: 83</div>
+              <p>Рейтинг: 8,3</p>
             </div>
-          </li>
-          <li>
-            <div>
-              <img src="" alt="Amara Resort & Spa">
-              <p>Гостиница <span>от 4000 Р.</span></p>
-              <div>
-                <a href="">Подробнее</a>
-                <button type="button">Забронировать</button>
-              </div>
-            </div>
-            <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <div>Рейтинг: 85</div>
-            </div>
-          </li>
-           <li>
+          </article>
+           <article>
             <div>
               <img src="" alt="Villas at Poco Diablo">
               <p>Апартаменты <span>от 3000 Р.</span></p>
@@ -161,15 +135,10 @@
               </div>
             </div>
             <div>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <div>Рейтинг: 92</div>
+              <p>Рейтинг: 9,2</p>
             </div>
-          </li>
-        </ul>
+          </article>
+        </div>
       </section>
     </main>
     <footer>
