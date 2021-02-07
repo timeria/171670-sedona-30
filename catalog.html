@@ -12,7 +12,7 @@
 </head>
 <body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation">
+    <nav class="main-navigation container">
       <a href="" class="main-header-logo">
         <img src="img/logo.svg" alt="Логотип Седоны" width="138" height="70">
       </a>
@@ -33,71 +33,130 @@
     </nav>
   </header>
   <main>
-    <section class="main-banner">
-    </section>
-    <section class="main-content">
-      <h1 class="main-content-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-      <h3 class="main-content-desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h3>
-      <ul class="features-list">
-        <li class="features-item">
-          <div class="features-desc">
-            <h2 class="features-title">Настоящий городок</h2>
-            <p class="features-text">— №1 —</p>
-            <p class="features-text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
-          </div>
-          <ul class="features-list-desc">
-            <li class="features-list-item">
-              <h3 class="features-list-title">Жильё</h3>
-              <p class="features-list-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+    <section class="filter">
+      <form action="https://echo.htmlacademy.ru/" method="get" target="_blank" class="container">
+        <fieldset class="filter-block">
+          <legend class="filter-title">Инфраструктура:</legend>
+          <ul class="filter-list">
+            <li class="filter-item">
+              <label for="check-1" class="filter-name">
+                <input type="checkbox" checked name="check-1" id="check-1">
+                <span>Бассейн</span>
+              </label>
             </li>
-            <li class="features-list-item">
-             <h3 class="features-list-title">Еда</h3>
-             <p class="features-list-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-           </li>
-           <li class="features-list-item">
-             <h3 class="features-list-title">Сувениры</h3>
-             <p class="features-list-text">Не только китайского, но и местного производства!</p>
-           </li>
-         </ul>
-       </li>
-       <li class="features-item">
-        <div class="features-desc">
-          <h2 class="features-title">Там есть<br> Мост дьявола</h2>
-          <p class="features-text">— №2 —</p>
-          <p class="features-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            <li class="filter-item">
+              <label for="check-2" class="filter-name">
+                <input type="checkbox" name="check-2" id="check-2">
+                <span>Парковка</span>
+              </label>
+            </li>
+            <li class="filter-item">
+              <label for="check-3" class="filter-name">
+                <input type="checkbox" name="check-3" id="check-3">
+                <span>Wi-Fi</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-block">
+          <legend class="filter-title">Тип жилья:</legend>
+          <ul class="filter-list">
+            <li class="filter-item">
+              <label for="check-4" class="filter-name">
+                <input type="checkbox" checked name="check-4" id="check-4">
+                <span>Гостиница</span>
+              </label>
+            </li>
+            <li class="filter-item">
+              <label for="check-5" class="filter-name">
+                <input type="checkbox" checked name="check-5" id="check-5">
+                <span>Мотель</span>
+              </label>
+            </li>
+            <li class="filter-item">
+              <label for="check-6" class="filter-name">
+                <input type="checkbox" checked name="check-6" id="check-6">
+                <span>Апартаменты</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter-range">
+          <legend class="filter-title">Стоимость в сутки (Р):</legend>
+          <input type="range">
+          <button type="submit" class="filter-button">Показать</button>
+        </fieldset>
+      </form>
+    </section>
+    <section class="page-content">
+      <div class="sort-top">
+        <div class="container">
+          <h2 class="sort-title">Найдено: 3</h2>
+          <ul class="sort-list">
+            <li class="sort-list-item">Сортировка:</li>
+            <li class="sort-list-item active"><a>По цене</a></li>
+            <li class="sort-list-item"><a href="#!">По типу</a></li>
+            <li class="sort-list-item"><a href="#!">По рейтингу</a></li>
+          </ul>
+          <ul class="sort-list-button">
+            <li class="active"><a>По убыванию</a></li>
+            <li><a href="#!">По возростанию</a></li>
+          </ul>
         </div>
-      </li>
-      <li class="features-item">
-        <h3 class="features-title">небольшая площадь</h3>
-        <p class="features-text">— №3 —</p>
-        <p class="features-text">все достопримечательности находятся очень близко</p>
-      </li>
-      <li class="features-item">
-        <h3 class="features-title">красивая дорога</h3>
-        <p class="features-text">— №4 —</p>
-        <p class="features-text">ехать в седону из лас-вегаса совсем  не скучно!</p>
-      </li>
-      <li class="features-item">
-        <h3 class="features-title">мало туристов</h3>
-        <p class="features-text">— №5 —</p>
-        <p class="features-text">большинство едет в гранд каньон и толпится там</p>
-      </li>
-    </ul>
-  </section>
-  <section class="main-form">
-    <div class="main-form-top">
-      <h2 class="main-form-title">Заинтересовались?</h2>
-      <p class="main-form-desc">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-    </div>
-    <div class="main-form-bottom">
-      <button type="button" class="main-form-button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
-    </div>
-  </section>
-  <section class="main-map">
-    <iframe src="" frameborder="0"></iframe>
-  </section>
-</main>
-<footer class="main-footer">
+      </div>
+      <div class="sort-rezult">
+        <article class="sort-rezult-item">
+          <div class="container">
+            <div class="sort-rezult-left">
+              <img src="img/card-1.jpg" alt="Amara Resort & Spa" width="135" height="90">
+              <h3 class="sort-rezult-title"><a href="#!">Amara Resort & Spa</a></h3>
+              <p class="sort-rezult-desc">Гостиница <span>от 4000 Р.</span></p>
+              <div class="sort-rezult-button">
+                <a href="#!">Подробнее</a>
+                <button type="button">Забронировать</button>
+              </div>
+            </div>
+            <div class="sort-rezult-right">
+              <p class="sort-rezult-popular">Рейтинг: 8,5</p>
+            </div>
+          </div>
+        </article>
+        <article class="sort-rezult-item">
+          <div class="container">
+            <div class="sort-rezult-left">
+              <img src="img/card-2.jpg" alt="Desert Quail Inn" width="135" height="90">
+              <h3 class="sort-rezult-title"><a href="#!">Desert Quail Inn</a></h3>
+              <p class="sort-rezult-desc">Мотель <span>от 3000 Р.</span></p>
+              <div class="sort-rezult-button">
+                <a href="#!">Подробнее</a>
+                <button type="button">Забронировать</button>
+              </div>
+            </div>
+            <div class="sort-rezult-right">
+              <p class="sort-rezult-popular">Рейтинг: 8,3</p>
+            </div>
+          </div>
+        </article>
+        <article class="sort-rezult-item">
+          <div class="container">
+            <div class="sort-rezult-left">
+              <img src="img/card-3.jpg" alt="Villas at Poco Diablo" width="135" height="90">
+              <h3 class="sort-rezult-title"><a href="#!">Villas at Poco Diablo</a></h3>
+              <p class="sort-rezult-desc">Апартаменты <span>от 3000 Р.</span></p>
+              <div class="sort-rezult-button">
+                <a href="#!">Подробнее</a>
+                <button type="button">Забронировать</button>
+              </div>
+            </div>
+            <div class="sort-rezult-right">
+              <p class="sort-rezult-popular">Рейтинг: 9,2</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="main-footer container">
   <div class="main-footer-contact">
     <a href="/" class="main-footer-link">#visitSEDONA</a>
     ТЕЛ: <a href="tel:+74956660166" class="main-footer-phone">+7(495) 666-01-66</a>
