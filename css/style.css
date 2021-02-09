@@ -2,14 +2,14 @@
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsans.woff2") format("woff2"),
-  url("../fonts/ptsans.woff") format("woff");
+       url("../fonts/ptsans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsans-bold.woff2") format("woff2"),
-  url("../fonts/ptsans-bold.woff") format("woff");
+       url("../fonts/ptsans-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -88,21 +88,16 @@ img {
   line-height: 26px;
   font-size: 21px;
   max-width: 470px;
-  margin: 0 auto 16px auto;
+  margin: 0 auto 16px;
 }
 .main-content-desc {
   text-align: center;
   margin-bottom: 50px;
   margin-top: 0;
-  font-size: 14px;
   color: var(--basic-dark);
-  font-weight: 400;
-}
-.features-item {
-  line-height: 21px;
 }
 .features-title {
-  margin: 0 0 25px 0;
+  margin: 0 0 25px;
   color: var(--basic-black);
   font-weight: 700;
   line-height: 26px;
@@ -211,10 +206,7 @@ img {
   margin-bottom: 9px;
 }
 .footer-logo-text {
-  font-weight: normal;
-  font-size: 14px;
   line-height: 26px;
-  text-transform: uppercase;
   color: var(--basic-black);
 }
 .footer-logo:hover path {
@@ -227,7 +219,6 @@ img {
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
-  text-transform: uppercase;
   color: var(--basic-white);
   margin: 0;
 }
@@ -239,19 +230,13 @@ img {
 }
 .filter-name span {
   display: inline-block;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
   color: var(--basic-white);
 }
 .filter-button {
   border: 2px solid var(--basic-white);
   border-radius: 2px;
-  width: 137px;
+  padding: 0 10px;
   height: 36px;
-  font-size: 14px;
-  line-height: 21px;
-  text-transform: uppercase;
   background: transparent;
   color: var(--basic-white);
   outline: none;
@@ -267,7 +252,7 @@ img {
 .sort-list a {
   border-bottom: 1px dashed var(--area-blue);
   opacity: .3;
-  color: var(--basic-black);
+  color: inherit;
 }
 .sort-item.active a {
   color: var(--area-blue);
@@ -294,14 +279,11 @@ img {
   color: var(--basic-black);
 }
 .hotel-card-desc {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
   color: var(--basic-dark);
   margin-bottom: 15px;
 }
 .hotel-card-buttons a {
-  width: 110px;
+  padding: 0 15px;
   height: 27px;
   line-height: 27px;
   display: inline-block;
@@ -310,7 +292,6 @@ img {
   background: var(--area-blue);
   color: var(--basic-white);
   font-weight: bold;
-  font-size: 14px;
   cursor: pointer;
   transition: all .2s;
 }
@@ -322,7 +303,7 @@ img {
   color:var(--basic-white-focus);
 }
 .hotel-card-buttons button {
-  width: 142px;
+  padding: 0 15px;
   height: 27px;
   line-height: 27px;
   display: inline-block;
@@ -331,8 +312,6 @@ img {
   background: var(--area-brown);
   color: var(--basic-white);
   font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
   cursor: pointer;
   transition: all .2s;
   outline: none;
@@ -346,8 +325,7 @@ img {
 }
 .hotel-card-rating {
   height: 27px;
-  width: 110px;
-  font-size: 14px;
+  padding: 0 15px;
   line-height: 27px;
   background: var(--area-special);
   color: var(--basic-special);
