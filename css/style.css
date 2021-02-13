@@ -30,6 +30,7 @@
   --area-brown: #766357;
   --area-brown-hover: #604E43;
   --area-brown-focus: #503E33;
+  --area-white-: rgba(255, 255, 255, .9);
 }
 
 /*Global*/
@@ -140,7 +141,6 @@ img {
 .features-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr max-content max-content;
 }
 .features-item:first-child,
 .features-item:nth-child(2) {
@@ -364,6 +364,6 @@ img {
   text-align: center;
   align-items: center;
   padding: 23px 0 36px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--area-white);
 }
 
