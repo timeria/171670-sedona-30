@@ -242,6 +242,10 @@ img {
 .footer-logo:focus path {
   fill: var(--area-grey-focus);
 }
+.filter-wrap {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+}
 .filter-title {
   font-weight: bold;
   font-size: 16px;
@@ -289,10 +293,14 @@ img {
 .sort-top {
   padding: 30px 0;
   border-bottom: 1px solid var(--area-grey-line);
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
 }
 .hotel-card {
   padding: 30px 0;
   border-bottom: 1px solid var(--area-grey-line);
+  display: grid;
+  grid-template-columns: 1fr max-content;
 }
 .hotel-card-title {
   margin-bottom: 7px;
