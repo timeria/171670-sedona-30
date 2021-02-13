@@ -2,14 +2,14 @@
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsans.woff2") format("woff2"),
-       url("../fonts/ptsans.woff") format("woff");
+  url("../fonts/ptsans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsans-bold.woff2") format("woff2"),
-       url("../fonts/ptsans-bold.woff") format("woff");
+  url("../fonts/ptsans-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -45,6 +45,10 @@
 }
 .page-wrap {
   background-color: var(--basic-white);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 a {
   text-decoration: none;
@@ -97,26 +101,33 @@ img {
   color: var(--basic-dark);
 }
 .features-title {
-  margin: 0 0 25px;
+  margin: 0 auto 25px;
   color: var(--basic-black);
   font-weight: 700;
-  line-height: 26px;
+  line-height: 21px;
   font-size: 21px;
+  max-width: 120px;
+}
+.blue-bg .features-title {
+  max-width: 150px;
 }
 .features-item:nth-child(n+3) {
   background-color: var(--area-grey);
-  padding: 50px 95px;
+  padding: 47px 71px 54px;
   text-align: center;
 }
 .features-text:nth-child(2) {
   margin-bottom: 25px;
   margin-top: 0;
 }
+.features-text:last-child {
+  margin: 0;
+}
 .features-desc {
   text-align: center;
   width: 400px;
   color: var(--basic-white);
-  padding: 50px 50px 55px;
+  padding: 47px 50px 54px;
 }
 .features-list-title {
   line-height: 21px;
@@ -125,6 +136,19 @@ img {
   color: var(--basic-black);
   font-weight: 700;
   font-size: 21px;
+}
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr max-content max-content;
+}
+.features-item:first-child,
+.features-item:nth-child(2) {
+  grid-column: 1 / -1;
+}
+.features-list-desc{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .features-desc.blue-bg {
   color: var(--basic-white);
@@ -136,6 +160,9 @@ img {
 .features-list-item {
   text-align: center;
   padding: 160px 70px 80px;
+}
+.features-list-text {
+  margin: 25px 0 0;
 }
 .main-form-top {
   padding: 58px 0 24px;
@@ -331,3 +358,12 @@ img {
   color: var(--basic-special);
   text-align: center;
 }
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  align-items: center;
+  padding: 23px 0 36px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
