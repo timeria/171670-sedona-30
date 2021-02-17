@@ -23,6 +23,7 @@
   --area-special: #F2F2F2;
   --area-grey: #EEEEEE;
   --area-grey-focus: #BDBBBC;
+  --area-grey-hover: #EBEBEB;
   --area-grey-line: #E5E5E5;
   --area-blue: #81B3D2;
   --area-blue-hover: #669EC0;
@@ -88,6 +89,7 @@ img {
   left: 50%;
   transform: translate(-50%);
   top: 0;
+  z-index: 2;
 }
 .main-navigation-list {
   display: flex;
@@ -118,7 +120,30 @@ img {
   color: var(--basic-dark);
 }
 .main-banner {
-  padding: 77px 0 25px;
+  padding: 0 0 25px;
+  height: 509px;
+  background-image: url(../img/banner.jpg);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 41.5px;
+}
+.main-banner:after {
+  content: "";
+  position: absolute;
+  width: 456px;
+  height: 350px;
+  background-image: url(../img/welcome.png);
+}
+.main-banner:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 57px;
+  background-image: url(../img/decor.png);
+  bottom: 0;
+  left: 0;
 }
 .features-title {
   margin: 0 auto 25px;
@@ -130,6 +155,9 @@ img {
 }
 .blue-bg .features-title {
   max-width: 150px;
+}
+.features-item:first-child {
+  background: url(../img/banner-right.jpg) no-repeat top right;
 }
 .features-item:nth-child(n+3) {
   background-color: var(--area-grey);
@@ -168,6 +196,7 @@ img {
 .features-item:nth-child(2) {
   display: flex;
   justify-content: flex-end;
+  background: url(../img/banner-left.jpg) no-repeat left top;
 }
 .features-list-desc{
   display: grid;
@@ -183,6 +212,16 @@ img {
 .features-list-item {
   text-align: center;
   padding: 160px 70px 80px;
+  position: relative;
+}
+.features-list-item:first-child {
+  background: url(../img/icon-1.svg)  no-repeat center 60px;
+}
+.features-list-item:nth-child(2) {
+  background: url(../img/icon-3.svg)  no-repeat center 60px;
+}
+.features-list-item:nth-child(3) {
+  background: url(../img/icon-2.svg)  no-repeat center 55px;
 }
 .features-list-text {
   margin: 25px 0 0;
@@ -207,6 +246,7 @@ img {
 .main-form-bottom {
   width: 568px;
   margin: 0 auto;
+  position: relative;
 }
 .main-form-button {
   border: none;
@@ -228,6 +268,124 @@ img {
 .main-form-button:focus {
   background: var(--area-focus);
   color: var(--basic-white-focus);
+}
+.main-map {
+  height: 473px;
+}
+.form-wrap {
+  padding: 55px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+  background: var(--basic-white);
+  text-transform: uppercase;
+  position: absolute;
+  top: 86px;
+  z-index: 2;
+  width: 100%;
+}
+.form-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 29px;
+  position: relative;
+}
+.form-item input {
+  min-width: 346px;
+  height: 38px;
+  border: none;
+  background: var(--area-special);
+  padding: 0 35px 0 13px;
+  outline: none;
+}
+.form-input-calendar {
+  position: absolute;
+  right: 7px;
+}
+.form-input input:hover {
+  background: var(--area-grey-hover);
+}
+.form-input input:hover + svg path {
+  fill: var(--basic-black);
+}
+.form-input input:focus {
+  background: var(--basic-white);
+  border: 2px solid var(--area-grey-line);
+}
+.form-input input:hover + svg path {
+  fill: var(--area-blue);
+}
+.form-item input::-moz-placeholder {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+.form-item input::-webkit-input-placeholder {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+.form-item input::-ms-input-placeholder{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+.form-number {
+  width: 114px;
+  display: flex;
+}
+.form-item .form-number input{
+  min-width: initial;
+  padding: 0;
+  width: 39px;
+  text-align: center;
+  color: var(--basic-black);
+  font-weight: bold;
+}
+.form-number-item {
+  border: none;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  padding: 0 13px;
+  cursor: pointer;
+  outline: none;
+}
+.form-number-item:hover rect,
+.form-number-item:hover path {
+  fill: var(--basic-black);
+}
+.form-number-item:focus rect,
+.form-number-item:focus path {
+  fill: var(--area-blue);
+}
+.form-button {
+  width: 100%;
+  padding: 16px;
+  background: var(--area-blue);
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+}
+.form-button:hover {
+  background: var(--area-blue-hover);
+}
+.form-button:focus {
+  background: var(--area-blue-focus);
+  color:var(--basic-white-focus);
+  outline: none;
 }
 .footer-social {
   display: flex;
