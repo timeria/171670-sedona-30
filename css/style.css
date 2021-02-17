@@ -95,7 +95,7 @@ img {
   display: flex;
   justify-content: space-between;
 }
-.main-navigation-list li:nth-child(2){
+.main-navigation-list li:nth-child(2) {
   width: 40%;
 }
 .main-navigation-list a {
@@ -198,7 +198,7 @@ img {
   justify-content: flex-end;
   background: url(../img/banner-left.jpg) no-repeat left top;
 }
-.features-list-desc{
+.features-list-desc {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -331,7 +331,7 @@ img {
   color: var(--basic-black);
   text-transform: uppercase;
 }
-.form-item input::-ms-input-placeholder{
+.form-item input::-ms-input-placeholder {
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
@@ -342,7 +342,7 @@ img {
   width: 114px;
   display: flex;
 }
-.form-item .form-number input{
+.form-item .form-number input {
   min-width: initial;
   padding: 0;
   width: 39px;
