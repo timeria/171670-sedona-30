@@ -51,6 +51,7 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 a {
   text-decoration: none;
@@ -96,7 +97,7 @@ img {
   justify-content: space-between;
 }
 .main-navigation-list li:nth-child(2) {
-  width: 40%;
+  width: 35.5%;
 }
 .main-navigation-list a {
   line-height: 26px;
@@ -111,16 +112,18 @@ img {
   line-height: 26px;
   font-size: 21px;
   max-width: 470px;
-  margin: 0 auto 16px;
+  margin: 0 auto 45px;
 }
 .main-content-desc {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   margin-top: 0;
   color: var(--basic-dark);
+  font-size: 14px;
+  font-weight: bold;
 }
 .main-banner {
-  padding: 0 0 25px;
+  padding: 17px 0 25px;
   height: 509px;
   background-image: url(../img/banner.jpg);
   position: relative;
@@ -129,19 +132,18 @@ img {
   justify-content: center;
   margin-bottom: 41.5px;
 }
-.main-banner:after {
+.main-banner::after {
   content: "";
-  position: absolute;
   width: 456px;
   height: 350px;
-  background-image: url(../img/welcome.png);
+  background-image: url(../img/welcome.svg);
 }
-.main-banner:before {
+.main-banner::before {
   content: "";
   position: absolute;
   width: 100%;
   height: 57px;
-  background-image: url(../img/decor.png);
+  background-image: url(../img/decor.svg);
   bottom: 0;
   left: 0;
 }
@@ -155,9 +157,6 @@ img {
 }
 .blue-bg .features-title {
   max-width: 150px;
-}
-.features-item:first-child {
-  background: url(../img/banner-right.jpg) no-repeat top right;
 }
 .features-item:nth-child(n+3) {
   background-color: var(--area-grey);
@@ -192,11 +191,16 @@ img {
 .features-item:first-child,
 .features-item:nth-child(2) {
   grid-column: 1 / -1;
+  position: relative;
+}
+.features-img-right {
+  position: absolute;
+  top:0;
+  right: 0;
 }
 .features-item:nth-child(2) {
   display: flex;
   justify-content: flex-end;
-  background: url(../img/banner-left.jpg) no-repeat left top;
 }
 .features-list-desc {
   display: grid;
@@ -227,7 +231,7 @@ img {
   margin: 25px 0 0;
 }
 .main-form-top {
-  padding: 58px 0 24px;
+  padding: 58px 0 47px;
   text-align: center;
 }
 .main-form-desc {
@@ -266,7 +270,7 @@ img {
   background: var(--area-brown-hover);
 }
 .main-form-button:focus {
-  background: var(--area-focus);
+  background: var(--area-brown-focus);
   color: var(--basic-white-focus);
 }
 .main-map {
@@ -281,7 +285,7 @@ img {
   background: var(--basic-white);
   text-transform: uppercase;
   position: absolute;
-  top: 86px;
+  top: 100%;
   z-index: 2;
   width: 100%;
 }
@@ -292,6 +296,9 @@ img {
   margin-bottom: 29px;
   position: relative;
 }
+.form-item:nth-child(3) {
+  margin-bottom: 54px;
+}
 .form-item input {
   min-width: 346px;
   height: 38px;
@@ -299,51 +306,48 @@ img {
   background: var(--area-special);
   padding: 0 35px 0 13px;
   outline: none;
+  border: 2px solid transparent;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 .form-input-calendar {
   position: absolute;
   right: 7px;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
 }
 .form-input input:hover {
   background: var(--area-grey-hover);
 }
-.form-input input:hover + svg path {
+.form-input-calendar:hover path {
   fill: var(--basic-black);
+  cursor: pointer;
 }
 .form-input input:focus {
   background: var(--basic-white);
   border: 2px solid var(--area-grey-line);
 }
-.form-input input:hover + svg path {
+.form-input-calendar:focus path {
   fill: var(--area-blue);
 }
 .form-item input::-moz-placeholder {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 26px;
   color: var(--basic-black);
-  text-transform: uppercase;
 }
 .form-item input::-webkit-input-placeholder {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 26px;
   color: var(--basic-black);
-  text-transform: uppercase;
 }
 .form-item input::-ms-input-placeholder {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 26px;
   color: var(--basic-black);
-  text-transform: uppercase;
 }
 .form-number {
   width: 114px;
   display: flex;
 }
-.form-item .form-number input {
-  min-width: initial;
+.form-number input {
+  min-width: 0;
   padding: 0;
   width: 39px;
   text-align: center;
@@ -359,12 +363,12 @@ img {
   cursor: pointer;
   outline: none;
 }
-.form-number-item:hover rect,
-.form-number-item:hover path {
+.form-number-item:hover svg,
+.form-number-item:hover svg {
   fill: var(--basic-black);
 }
-.form-number-item:focus rect,
-.form-number-item:focus path {
+.form-number-item:focus svg,
+.form-number-item:focus svg {
   fill: var(--area-blue);
 }
 .form-button {
