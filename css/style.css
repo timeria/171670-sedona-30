@@ -335,9 +335,6 @@ img {
 .form-input-calendar:focus path {
   fill: var(--area-blue);
 }
-.form-item input::placeholder {
-  color: var(--basic-black);
-}
 .form-item input::-moz-placeholder {
   color: var(--basic-black);
 }
@@ -345,6 +342,9 @@ img {
   color: var(--basic-black);
 }
 .form-item input::-ms-input-placeholder {
+  color: var(--basic-black);
+}
+.form-item input::placeholder {
   color: var(--basic-black);
 }
 .form-number {
@@ -603,9 +603,6 @@ img {
   outline: none;
   padding: 0 10px 0 0;
 }
-.price-controls input::placeholder {
-  color: var(--basic-white);
-}
 .price-controls input::-moz-placeholder {
   color: var(--basic-white);
 }
@@ -613,6 +610,9 @@ img {
   color: var(--basic-white);
 }
 .price-controls input::-ms-input-placeholder {
+  color: var(--basic-white);
+}
+.price-controls input::placeholder {
   color: var(--basic-white);
 }
 .min-price input{
@@ -703,21 +703,22 @@ img {
 }
 .hotel-card-right::before {
   content: "";
-  width: 76px;
   height: 17px;
   display: block;
   position: absolute;
   top: 0;
   right: 0;
+  background-image: url(../img/star.svg);
+  background-repeat: space;
 }
-.hotel-card-rating-1 {
-  background: url(../img/star-4.svg) no-repeat top right;
+.hotel-card-rating-1::before {
+  width: 88px
 }
-.hotel-card-rating-2 {
-  background: url(../img/star-3.svg) no-repeat top right;
+.hotel-card-rating-2::before {
+  width: 65px;
 }
-.hotel-card-rating-3 {
-  background: url(../img/star-2.svg) no-repeat top right;
+.hotel-card-rating-3::before {
+  width: 42px;
 }
 .hotel-card-title {
   margin-bottom: 7px;
