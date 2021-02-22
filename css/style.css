@@ -126,7 +126,7 @@ img {
 .main-banner {
   padding: 17px 0 25px;
   height: 509px;
-  background-image: url(../img/banner.jpg);
+  background: var(--area-blue) url(../img/banner.jpg);
   position: relative;
   display: flex;
   align-items: center;
@@ -319,6 +319,7 @@ img {
   outline: none;
   padding: 0;
   cursor: pointer;
+  background: transparent;
 }
 .form-input input:hover {
   background: var(--area-grey-hover);
@@ -333,6 +334,9 @@ img {
 }
 .form-input-calendar:focus path {
   fill: var(--area-blue);
+}
+.form-item input::placeholder {
+  color: var(--basic-black);
 }
 .form-item input::-moz-placeholder {
   color: var(--basic-black);
@@ -444,7 +448,7 @@ img {
   fill: var(--area-grey-focus);
 }
 .filter {
-  background-image: url(../img/filter.jpg);
+  background: var(--area-blue) url(../img/filter.jpg);
   padding: 26.5px 0 32px;
   background-size: cover;
 }
@@ -459,16 +463,18 @@ img {
   margin-bottom: 0;
 }
 .filter-item input{
-  visibility: hidden;
   position: absolute;
   left:0;
+}
+.visually-hidden {
+  opacity: 0;
 }
 .filter-name {
   display: flex;
   align-items: center;
   color: var(--basic-white);
 }
-.filter-name:before {
+.filter-name::before {
   content: "";
   display: block;
   width: 23px;
@@ -476,19 +482,22 @@ img {
   background-image: url(../img/checkbox.svg);
   margin-right: 17px;
 }
-.filter-name:after {
+.filter-name::after {
   content: "";
   display: block;
   position: absolute;
   left: 4.5px;
-  top: 2px;
+  top: 1px;
   width: 22px;
   height: 17px;
   background-image: url(../img/check.svg);
   opacity: 0;
 }
-.filter-item input:checked + .filter-name:after {
+.filter-item input:checked + .filter-name::after {
   opacity: 1;
+}
+.filter-item input:checked + .filter-name::before {
+  background-image: url(../img/checkbox-active.svg);
 }
 .filter-wrap {
   display: grid;
@@ -513,6 +522,7 @@ img {
 }
 .range-filter {
   margin: 10px 0 23px;
+  width: 317px;
 }
 .range-controls {
   position: relative;
@@ -540,9 +550,7 @@ img {
   cursor: pointer;
 }
 .range-controls .toggle:hover {
-  width: 4.6px;
-  height: 4.6px;
-  border-width: 9px;
+  transform: scale(1.2);
 }
 .price-controls {
   display: flex;
@@ -551,7 +559,7 @@ img {
   border-radius: 2px;
   position: relative;
 }
-.price-controls:before {
+.price-controls::before {
   content: "";
   position: absolute;
   width: 2px;
@@ -565,17 +573,38 @@ img {
 }
 .price-controls label{
   width: 50%;
+  height: 36px;
+  position: relative;
+}
+.price-controls .min-price {
+  padding: 0 0 0 62px;
+}
+.price-controls .max-price {
+  padding: 0 0 0 52px;
+}
+.price-controls span {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: var(--basic-white);
+  line-height: 22px;
 }
 .price-controls input{
-  width: 100%;
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 50%;
   height: 36px;
   border: none;
   background: transparent;
-  text-align: center;
   font-size: 14px;
   text-transform: uppercase;
   color: var(--basic-white);
   outline: none;
+  padding: 0 10px 0 0;
+}
+.price-controls input::placeholder {
+  color: var(--basic-white);
 }
 .price-controls input::-moz-placeholder {
   color: var(--basic-white);
@@ -585,6 +614,9 @@ img {
 }
 .price-controls input::-ms-input-placeholder {
   color: var(--basic-white);
+}
+.min-price input{
+  width: 46%;
 }
 .filter-button {
   border: 2px solid var(--basic-white);
@@ -664,6 +696,28 @@ img {
 }
 .hotel-card-right {
   text-align: right;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.hotel-card-right::before {
+  content: "";
+  width: 76px;
+  height: 17px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.hotel-card-rating-1 {
+  background: url(../img/star-4.svg) no-repeat top right;
+}
+.hotel-card-rating-2 {
+  background: url(../img/star-3.svg) no-repeat top right;
+}
+.hotel-card-rating-3 {
+  background: url(../img/star-2.svg) no-repeat top right;
 }
 .hotel-card-title {
   margin-bottom: 7px;

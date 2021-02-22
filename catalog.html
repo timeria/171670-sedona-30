@@ -40,15 +40,15 @@
             <legend class="filter-title">Инфраструктура:</legend>
             <ul class="filter-list list-reset">
               <li class="filter-item">
-                <input type="checkbox" checked name="check-1" id="check-1">
+                <input type="checkbox" checked name="check-1" id="check-1" class="visually-hidden">
                 <label for="check-1" class="filter-name">Бассейн</label>
               </li>
               <li class="filter-item">
-                <input type="checkbox" name="check-2" id="check-2">
+                <input type="checkbox" name="check-2" id="check-2" class="visually-hidden">
                 <label for="check-2" class="filter-name">Парковка</label>
               </li>
               <li class="filter-item">
-                <input type="checkbox" name="check-3" id="check-3">
+                <input type="checkbox" name="check-3" id="check-3" class="visually-hidden">
                 <label for="check-3" class="filter-name">Wi-Fi</label>
               </li>
             </ul>
@@ -57,15 +57,15 @@
             <legend class="filter-title">Тип жилья:</legend>
             <ul class="filter-list list-reset">
               <li class="filter-item">
-                <input type="checkbox" checked name="check-4" id="check-4">
+                <input type="checkbox" checked name="check-4" id="check-4" class="visually-hidden">
                 <label for="check-4" class="filter-name">Гостиница</label>
               </li>
               <li class="filter-item">
-                <input type="checkbox" checked name="check-5" id="check-5">
+                <input type="checkbox" checked name="check-5" id="check-5" class="visually-hidden">
                 <label for="check-5" class="filter-name">Мотель</label>
               </li>
               <li class="filter-item">
-                <input type="checkbox" checked name="check-6" id="check-6">
+                <input type="checkbox" checked name="check-6" id="check-6" class="visually-hidden">
                 <label for="check-6" class="filter-name">Апартаменты</label>
               </li>
             </ul>
@@ -75,10 +75,12 @@
             <div class="range-filter">
               <div class="price-controls">
                 <label class="min-price">
-                  <input type="text" name="min-price" placeholder="от 0">
+                  <span>от</span>
+                  <input type="text" name="min-price" placeholder="0">
                 </label>
                 <label class="max-price">
-                  <input type="text" name="max-price" placeholder="до 3000">
+                  <span>до</span>
+                  <input type="text" name="max-price" placeholder="3000">
                 </label>
               </div>
               <div class="range-controls">
@@ -137,19 +139,7 @@
                 </div>
               </div>
             </div>
-            <div class="hotel-card-right">
-              <svg width="19" height="17" viewBox="0 0 19 17" fill="none">
-                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-              </svg>
-              <svg width="19" height="17" viewBox="0 0 19 17" fill="none">
-                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-              </svg>
-              <svg width="19" height="17" viewBox="0 0 19 17" fill="none">
-                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-              </svg>
-              <svg width="19" height="17" viewBox="0 0 19 17" fill="none">
-                <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-              </svg>
+            <div class="hotel-card-right hotel-card-rating-1">
               <p class="hotel-card-rating">Рейтинг: 8,5</p>
             </div>
           </article>
@@ -170,16 +160,7 @@
                 </div>
               </div>
             </div>
-            <div class="hotel-card-right">
-             <svg width="19" height="17" viewBox="0 0 19 17" fill="none">
-              <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-            </svg>
-            <svg width="19" height="17" viewBox="0 0 19 17" fill="none">
-              <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-            </svg>
-            <svg width="19" height="17" viewBox="0 0 19 17" fill="none">
-              <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-            </svg>
+            <div class="hotel-card-right hotel-card-rating-2">
             <p class="hotel-card-rating">Рейтинг: 8,3</p>
           </div>
         </article>
@@ -200,13 +181,7 @@
                 </div>
             </div>
           </div>
-          <div class="hotel-card-right">
-           <svg width="19" height="17" viewBox="0 0 19 17" fill="none">
-            <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-          </svg>
-          <svg width="19" height="17" viewBox="0 0 19 17" fill="none">
-            <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
-          </svg>
+          <div class="hotel-card-right hotel-card-rating-3">
           <p class="hotel-card-rating">Рейтинг: 9,2</p>
         </div>
       </article>
