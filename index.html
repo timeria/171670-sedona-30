@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/180.png">
@@ -34,19 +34,20 @@
       </nav>
     </header>
     <main>
-      <section class="main-banner">
-      </section>
+      <div class="main-banner"></div>
       <section class="main-content">
         <h1 class="main-content-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
         <h3 class="main-content-desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</h3>
         <ul class="features-list list-reset">
           <li class="features-item">
-            <div class="features-desc blue-bg">
-              <h2 class="features-title">Настоящий городок</h2>
-              <p class="features-text">— №1 —</p>
-              <p class="features-text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            <div class="features-top">
+              <div class="features-desc blue-bg">
+                <h2 class="features-title">Настоящий городок</h2>
+                <p class="features-text">— №1 —</p>
+                <p class="features-text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
+              <img src="img/banner-right.jpg" alt="Настоящий городок" class="features-img features-img-right">
             </div>
-            <img src="img/banner-right.jpg" alt="Настоящий городок" class="features-img features-img-right">
             <ul class="features-list-desc list-reset">
               <li class="features-list-item">
                 <h3 class="features-list-title">Жильё</h3>
@@ -152,7 +153,8 @@
       </div>
     </section>
     <section class="main-map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.4768583468672!2d30.322490928069257!3d59.93592773072087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f5d74374b%3A0x4c99c81620f2ac9c!2z0JTQvtC8INC60L3QuNCz0Lg!5e0!3m2!1sru!2sru!4v1613925655919!5m2!1sru!2sru" width="100%" height="473" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <h2 class="visually-hidden">Карта Седона</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.4768583468672!2d30.322490928069257!3d59.93592773072087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310f5d74374b%3A0x4c99c81620f2ac9c!2z0JTQvtC8INC60L3QuNCz0Lg!5e0!3m2!1sru!2sru!4v1613925655919!5m2!1sru!2sru" width="1200" height="473" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </section>
   </main>
   <footer class="footer">
