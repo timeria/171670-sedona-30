@@ -290,6 +290,10 @@ img {
   top: 100%;
   z-index: 2;
   width: 100%;
+  display: none;
+}
+.form-wrap.form-show {
+  display: block;
 }
 .form-item {
   display: flex;
