@@ -661,9 +661,15 @@ img {
 .sort-list-button {
   font-size: 0;
 }
-.sort-list-button a{
+.sort-list-button a {
   display: flex;
   align-items: center;
+}
+.sort-list-link:hover svg {
+  fill: var(--basic-black);
+}
+.sort-list-link.active svg {
+  fill: var(--area-blue);
 }
 .sort-list-button li:first-child {
   margin-right: 12px;
