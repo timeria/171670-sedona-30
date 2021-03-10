@@ -30,10 +30,15 @@ link.addEventListener("click", function () {
 })
 
 form.addEventListener("submit", function (evt) {
-  if(isStorageSupport) {
-    localStorage.setItem("dateStart", dateStart.value);
-    localStorage.setItem("adult", adult.value);
-    localStorage.setItem("children", children.value);
+  if (!adult || !dateStart) {
+    evt.preventDefault();
+    popup.classList.add("modal-error");
+  } else {
+    if(isStorageSupport) {
+      localStorage.setItem("dateStart", dateStart.value);
+      localStorage.setItem("adult", adult.value);
+      localStorage.setItem("children", children.value);
+    }
   }
 })
 
