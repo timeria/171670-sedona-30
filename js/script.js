@@ -30,9 +30,9 @@ link.addEventListener("click", function () {
 })
 
 form.addEventListener("submit", function (evt) {
-  if (!adult || !dateStart) {
+  if (!adult.value || !dateStart.value) {
     evt.preventDefault();
-    popup.classList.add("modal-error");
+    popup.classList.add("form-error");
   } else {
     if(isStorageSupport) {
       localStorage.setItem("dateStart", dateStart.value);
