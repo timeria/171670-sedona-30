@@ -79,6 +79,7 @@ img {
 }
 .container {
   max-width: 1200px;
+  min-width: 1200px;
   margin: 0 auto;
 }
 .container-page {
@@ -91,8 +92,7 @@ img {
 }
 .main-header-logo {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 531px;
   z-index: 2;
 }
 .main-navigation-list {
@@ -808,7 +808,11 @@ img {
   justify-content: flex-end;
   flex-direction: column;
 }
-.hotel-card-right::before {
+.hotel-card-right span {
+  position: relative;
+  font-size: 0;
+}
+.hotel-card-right span::before {
   content: "";
   height: 17px;
   display: block;
@@ -908,7 +912,7 @@ img {
   background: var(--area-special);
   color: var(--basic-special);
   text-align: center;
-  margin: 47px 0 0;
+  margin: 43px 0 0;
 }
 .footer {
   display: grid;
